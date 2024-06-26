@@ -27,7 +27,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo This is Test'
-                sleep 10
+                sleep 10 // comment in this sleep it will fail
             }
         }
         stage('Deploy') {
@@ -43,7 +43,7 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
                 echo "Password: ${params.PASSWORD}"
                 echo "triggered test again"
-               // error 'some failure'
+               // error 'some failure'  // comment out for faliure
             }
         }
     }
